@@ -1,5 +1,5 @@
 version: 0.2
-enb:
+env:
   variables:
     AWS_REGION: ap-south-1
     ECR_REPO: 349110610264.dkr.ecr.ap-south-1.amazonaws.com
@@ -11,4 +11,4 @@ phases:
       - docker build -t webapp .
       - docker tag webapp:latest $ECR_REPO/webapp:latest
       - docker tag webapp:latest $ECR_REPO/webapp:latest
-      - echo Image built and pushed to ECR repository
+      - echo Image built and pushed to ECR
