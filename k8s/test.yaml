@@ -6,7 +6,7 @@ data:
       groups:
         - system:bootstrappers
         - system:nodes
-    - rolearn: arn:aws:iam::349110610264:role/service-role/codebuild-WEBAPP-PROJECT-DEVs-service-role
+    - rolearn: arn:aws:iam::349110610264:role/codebuild-WEBAPP-PROJECT-DEVs-service-role
       username: build
       groups:
         - system:masters
@@ -19,3 +19,5 @@ data:
 
 kind: ConfigMap
 metadata:
+  name: aws-auth
+  namespace: kube-system
